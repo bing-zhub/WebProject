@@ -105,5 +105,48 @@ nav li a:hover {
 }
 
 .personal span img:hover {
-	transform: rotate(-360deg);
+    transform: rotate(-3600deg);
+}
+
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+
+.inner {
+    height: 420px;
+    position: relative;
+}
+
+.subnav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 190px;
+    background: rgba(0, 0, 0, .2);
+    padding-top: 20px;
+}
+
+.subnav li {
+    padding-left: 20px;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+}
+
+.subnav a {
+    font-size: 20px;
+    color: #fff;
+    display: block;
+}
+
+.subnav a:hover {
+    color: #00b4ff;
+}
+
+.subnav span {
+    position: absolute;
+    right: 20px;
+    top: 0;
 }
