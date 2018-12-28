@@ -1,7 +1,7 @@
 *{
 	margin:0;
 	padding:0;
-	box-sizing: border-box;   /*  css3 盒子模型 */
+	box-sizing: border-box;
 }
 em,i{
 	font-style:normal;
@@ -44,4 +44,9 @@ body{
 	height:0;
 }.clearfix{
 	*zoom:1;
+}
+ /* 版心 */
+.w {
+    width: 1200px;
+    margin: auto;
 }
