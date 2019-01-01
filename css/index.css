@@ -264,6 +264,24 @@ nav li a:hover {
 	cursor: pointer;
 }
 
+.carrier {
+	margin-top: 10px;
+	background-color: #fff;
+	height: 60px;
+	line-height: 60px;
+	position: relative;
+	box-shadow: 1px 1px 12px rgba(0, 0, 0, .2);
+}
+
+.carrier .rec-l {
+	padding-left: 20px;
+}
+
+.carrier .rec-l a {
+	margin: 0 15px;
+	font-size: 14px;
+}
+
 .products {
 	margin-top: 20px;
 }
@@ -298,7 +316,7 @@ nav li a:hover {
 	margin-bottom: 15px;
 	transition: all 0.3s;
 	overflow: hidden;
-	
+	border: #7e7e7e1c 1px solid;
 }
 
 .products .pro-bd ul li:hover {
