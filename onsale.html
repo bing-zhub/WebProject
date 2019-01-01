@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,35 +14,35 @@
 
 <body>
     <header>
-            <!-- logo -->
-            <div class="logo">
-                <h1>
-                    <a href="#" title="在线课堂" style="margin-top:-16px;">在线课堂</a>
-                </h1>
-            </div>
-            <!-- nav -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="courses.html">课程</a></li>
-                    <li><a href="plan.html">职业规划</a></li>
-                </ul>
-            </nav>
-            <!-- search -->
-            <div class="search">
-                <input type="search" placeholder="请输入关键词~">
-                <button/>
-            </div>
+        <!-- logo -->
+        <div class="logo">
+            <h1>
+                <a href="#" title="在线课堂" style="margin-top:-16px;">在线课堂</a>
+            </h1>
+        </div>
+        <!-- nav -->
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="courses.html">课程</a></li>
+                <li><a href="plan.html">职业规划</a></li>
+            </ul>
+        </nav>
+        <!-- search -->
+        <div class="search">
+            <input type="search" placeholder="请输入关键词~">
+            <button />
+        </div>
 
-            <!-- personal -->
-            <div class="personal">
-                <dl>
-                    <span>
-                        <img src="./images/avator.png" alt="">
-                    </span>
-                    <span>梅干菜烧饼不加肉</span>
-                </dl>
-            </div>
+        <!-- personal -->
+        <div class="personal">
+            <dl>
+                <span>
+                    <img src="./images/avator.png" alt="">
+                </span>
+                <span>梅干菜烧饼不加肉</span>
+            </dl>
+        </div>
     </header>
 
     <div class="banner" style="background-color: #45a3f8; height:335px;">
@@ -66,7 +67,7 @@
                 </div>
                 <div class="detail-content">
                     <p class="detail-desc">开课倒计时</p>
-                    <p class="detail-value">01-09 19:00</p>
+                    <p id="detail-count-down" class="detail-value">01-09 19:00</p>
                 </div>
             </div>
         </div>
@@ -76,7 +77,7 @@
     <div class="price">
         <div class="left-content">
             <span class="date-count-down">
-                <span>sasa</span>
+                <span id="price-count-down">sasa</span>
             </span>
             <span style="font-size: 18px;color: #565656;">限时优惠价</span>
             <span style="vertical-align: -5px; font-weight: 700; font-size: 35px;color: #f66;">2333￥</span>
@@ -91,11 +92,33 @@
     </div>
 
     <div class="course-info">
-        
+        <div class="course-main">
+            <p style="color: white;font-size: 30px; font-weight: 700; letter-spacing: .8px;">为什么要学习PHP</p>
+            <p style="color: white;text-align: left; margin: 0 20px 10px;line-height: 3;text-indent: 2em;">
+                为什么要学习PHP为什么要学习PHP为什么要学习PHP为什么要学习PHP为什么要学习PHP为什么要学习PHP为什么要学习PHP为什么要学习PHP为什么要学习PHP为什么要学习PHP为什么要学习PHP为什么要学习PHP
+            </p>
+
+            <p style="color: white;font-size: 30px; font-weight: 700; letter-spacing: .8px;">介绍视频</p>
+            <video style="width: 90%;height: 90%; margin-top: 20px;" src="http://shiyanlou.oss-cn-hangzhou.aliyuncs.com/image/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BB%8B%E7%BB%8D%E8%A7%86%E9%A2%91.mp4"
+                controls></video>
+
+            <p style="color: white;font-size: 30px; margin-top: 20px;font-weight: 700; letter-spacing: .8px;">课程亮点</p>
+            <p class="feature">课程亮点</p>
+            <p class="feature">课程亮点</p>
+            <p class="feature">课程亮点</p>
+            <p class="feature">课程亮点</p>
+            <p style="color: white;font-size: 30px; font-weight: 700; letter-spacing: .8px;">
+                学完之后能做什么
+            </p>
+            <p style="color: white;text-align: left; margin: 0 40px 10px;line-height: 3;text-indent: 2em;">
+                    学完之后能做什么学完之后能做什么学完之后能做什么学完之后能做什么学完之后能做什么学完之后能做什么学完之后能做什么学完之后能做什么学完之后能做什么
+            </p>
+        </div>
+        <div class="divider"></div>
     </div>
 
 
-    <footer>
+    <footer style="margin-top:200px;">
         <div class="w">
             <div class="footer-l">
                 <img src="images/logo.png" alt="">
@@ -128,4 +151,26 @@
         </div>
     </footer>
 </body>
+<script>
+    let priceCtd = document.getElementById('price-count-down');
+    let detailCtd = document.getElementById('detail-count-down');
+    let endDate = Date.parse('Jan 20, 2019');
+
+    function setCountDown(){
+        let nowDate = new Date();
+        let diff =  endDate - nowDate;
+        let day = Math.floor(diff/86400000);
+        diff -= day * 86400000;
+        let hour = Math.floor(diff/3600000);
+        diff -= hour * 3600000;
+        let minute = Math.floor(diff/60000);
+        diff -= minute * 60000;
+        let second = Math.floor(diff/1000);
+        priceCtd.innerText = "特价仅剩: "+day+"天"+hour+"小时"+minute+"分钟"+second+"秒";
+        detailCtd.innerText = day+"天"+hour+"小时"+minute+"分钟"+second+"秒";
+    }
+
+    setInterval(setCountDown, 1000);
+    
+</script>
 </html>
