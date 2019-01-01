@@ -21,7 +21,7 @@ header {
 
 .logo a {
     display: block;
-    widows: 248px;
+    width: 248px;
     height: 48px;
     background: url(../images/logo.png) no-repeat;
     text-indent: -990px;  /*隐藏链接文字*/
