@@ -110,7 +110,7 @@ nav li a:hover {
 
 .banner {
     height: 420px;
-    background-color: #1c036c;
+    background-color: #c1ddf8;
 }
 
 .inner {
@@ -151,27 +151,27 @@ nav li a:hover {
     top: 0;
 }
 
-.circle {
-	width: 176px;
-	height: 20px;
+.container {
+	position: relative;
+	width: 750px;
+	height: 420px;
+	margin:0 245px 0 auto;
+	overflow: hidden;
+}
+
+.wrap {
 	position: absolute;
-	left: 50%;
-	transform: translate(-50%);
-	bottom: 15px;
+	width: 4800px;
+	height: 420px;
+	z-index: 1;
+	transition: all 1s;
+
 }
-.circle i {
-	display: inline-block;
-	width: 13px;
-	height: 13px;
-	background: rgba(255, 255, 255, 0.4);
-	margin: 0 5px;
-	border-radius: 6px;
-	cursor: pointer;
-	transition: all 0.4s;
-}
-.circle i:hover {
-	width: 20px;
-	background-color: #fff;
+
+.container .wrap img {
+	float: left;
+	width: 750px;
+	height: 420px;
 }
 
 .schedule {
