@@ -1,39 +1,39 @@
 ## 概览
-本项目部分完成了一个在线课堂网站的前端页面, 包括首页/全部课程/课程详情/职业规划和课程促销5个页面, 使用纯HTML+CSS+JavaScript实现, 无任何外部框架. 未做任何响应式适配.
+本项目部分完成了一个在线课堂网站的前端页面, 包括首页/部课程/课程详情/职业规划和课程促销5个页面, 使用纯HTML+CSS+JavaScript实现, 无任何外部框架. 未做任何响应式适配.
 
 ## 详情
 
-目录结构
+目录结构
 ```
 .
 ├── README.md 
 ├── course.html // 课程详情页
-├── courses.html // 所有课程页
+├── courses.html // 所有课程页
 ├── css
 │   ├── base.css // 所有页面公有样式
-│   ├── course.css // 课程详情页样式
+│   ├── course.css // 课程详情页样式
 │   ├── index.css // 首页样式
-│   ├── modal.css // modal浮窗样式
-│   ├── onsale.css // 促销页样式
-│   └── plan.css // 职业规划样式
+│   ├── modal.css // modal浮窗样式
+│   ├── onsale.css // 促销页样式
+│   └── plan.css // 职业规划样式
 ├── favicon.ico // 网站ico
 ├── images // 所有图片
-├── index.html // 网站首页
+├── index.html // 网站首页
 ├── onsale.html // 课程促销页
-├── plan.html // 职业规划页
+├── plan.html // 职业规划页
 └── video // 所有视频
 ```
 
 
-项目页面截图与具体实现
-
+项目页面截图与具体实现
+
 
 ### 首页
 ![index](./img/index.jpg)
-首页主要由`header`/`banner`/`recommend`/`product`和`footer`五大部分组成, 具体如下所示.
+首页主要由`header`/`banner`/`recommend`/`product`和`footer`五大部分组成, 具体如下所示.
 ```
 .
-├── header //页头
+├── header //页头
 │   ├── logo // logo
 │   ├── nav //导航栏
 │   ├── search // 搜索框
@@ -56,8 +56,8 @@
 在首页点击`nav`中的课程, 会跳转到所有课程页.
 ![courses](./img/courses.jpg)
 
-图片悬停在课程选项上时通过`:hover`添加卡片阴影, 和`z`的变换, 实现动效.
-复用首页页头与页脚, 在版心部分添加课程分类与所有课程.
+图片悬停在课程选项上时通过`:hover`添加卡片阴影, 和`z`的变换, 实现动效.
+复用首页页头与页脚, 在版心部分添加课程分类与所有课程.
 在页脚上方添加了用于换页的`pagination` 添加JavaScript后可以用于多页面切换.
 
 ### 课程详情页
@@ -67,7 +67,7 @@
 
 ```
 .
-├── header //页头
+├── header //页头
 │   ├── logo // logo
 │   ├── nav //导航栏
 │   ├── search // 搜索框
@@ -91,7 +91,7 @@ modal本质是一个全屏`div`标签, 最初为`display`属性为`none`, 默认
 ![plan](./img/plan.jpg)
 ```
 .
-├── header //页头
+├── header //页头
 │   ├── logo // logo
 │   ├── nav //导航栏
 │   ├── search // 搜索框
@@ -103,14 +103,14 @@ modal本质是一个全屏`div`标签, 最初为`display`属性为`none`, 默认
     ├── footer-l // 左页脚
     └── footer-r // 右页脚
 ```
-### 促销页
+### 促销页
 在首页banner中, 点击轮播图便可跳转到本页. 本页主要提供正在进行促销的课程. 
 
 ![onsale](./img/onsale.jpg)
   
 ```
 .
-├── header //页头
+├── header //页头
 │   ├── logo // logo
 │   ├── nav //导航栏
 │   ├── search // 搜索框
