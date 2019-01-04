@@ -3,7 +3,7 @@ body {
     
 }
 
-header {
+.main-header {
     width: 1300px;
     height: 100px;
     /* background-color: #F00; */
@@ -165,7 +165,7 @@ nav li a:hover {
 	height: 420px;
 	z-index: 1;
 	transition: all 1s;
-
+	background-color: #c6dcf5;
 }
 
 .container .wrap img {
@@ -359,28 +359,28 @@ nav li a:hover {
 }
 
 
-footer {
+.main-footer {
 	height: 225px;
 	margin-top: 475px;
 	padding-top: 30px;
 	background-color: #fff;
 }
 
-footer .w {
+.main-footer .w {
 	position: relative;
 }
 
-footer .footer-l {
+.main-footer .footer-l {
 	margin-left: 20px;
 	float: left;
 }
 
-footer .footer-l p {
+.main-footer .footer-l p {
 	margin: 25px 0 15px;
 	line-height: 20px;
 }
 
-footer .footer-l a {
+.main-footer .footer-l a {
 	display: inline-block;
 	width: 120px;
 	height: 35px;
@@ -390,34 +390,34 @@ footer .footer-l a {
 	line-height: 30px;
 }
 
-footer .footer-l a:hover {
+.main-footer .footer-l a:hover {
 	background-color: #22b0ff;
 	color: #fff;
 }
 
-footer .footer-r {
+.main-footer .footer-r {
 	float: right;
 }
 
-footer .footer-r dl {
+.main-footer .footer-r dl {
 	float: left;
 }
 
-footer .footer-r dl:nth-child(2) {
+.main-footer .footer-r dl:nth-child(2) {
 	margin: 0 130px;
 }
 
-footer .footer-r dt {
+.main-footer .footer-r dt {
 	font-size: 18px;
 	color: #333;
 	height: 30px;
 } 
 
-footer .footer-r dl dd {
+.main-footer .footer-r dl dd {
 	height: 20px;
 }
 
-footer .footer-r dl dd:hover {
+.main-footer .footer-r dl dd:hover {
 	cursor: pointer;
 	color: #22b0ff; 
 }

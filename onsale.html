@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/onsale.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="shortcut icon" href="favicon.ico">
 </head>
 
 <body>
-    <header>
+    <header class="main-header">
         <!-- logo -->
         <div class="logo">
             <h1>
@@ -31,7 +32,7 @@
         <!-- search -->
         <div class="search">
             <input type="search" placeholder="请输入关键词~">
-            <button />
+            <button>
         </div>
 
         <!-- personal -->
@@ -44,6 +45,23 @@
             </dl>
         </div>
     </header>
+
+    <div id="modal" class="modal">
+
+            <div class="modal-content">
+    
+                <header class="modal-header">
+                    <span class="close">×</span>
+                </header>
+    
+                <div class="modal-body">
+    
+                    <img style="width:500px; height: 500px; margin: 25px 200px;" src="./images/qrcode.jpeg"/>
+    
+                </div>
+            </div>
+    
+        </div>
 
     <div class="banner" style="background-color: #45a3f8; height:335px;">
         <div class="banner-container">
@@ -87,7 +105,7 @@
 
         <div class="right-content">
             <a href="" class="enroll">立即加入</a>
-            <a href="" class="more">加入微信群</a>
+            <a id ="start" href="#" class="more">加入微信群</a>
         </div>
     </div>
 
@@ -99,7 +117,7 @@
             </p>
 
             <p style="color: white;font-size: 30px; font-weight: 700; letter-spacing: .8px;">介绍视频</p>
-            <video style="width: 90%;height: 90%; margin-top: 20px;" src="./video/video.flv " poster="./images/poster.jpg" autoplay controls></video>
+            <video style="width: 90%;height: 90%; margin-top: 20px;" src="./video/video.mp4 " poster="./images/poster.jpg" autoplay controls></video>
 
             <p style="color: white;font-size: 30px; margin-top: 20px;font-weight: 700; letter-spacing: .8px;">课程亮点</p>
             <p class="feature">课程亮点</p>
@@ -117,7 +135,7 @@
     </div>
 
 
-    <footer style="margin-top:200px;">
+    <footer class="main-footer" style="margin-top:200px;">
         <div class="w">
             <div class="footer-l">
                 <img src="images/logo.png" alt="">
@@ -169,6 +187,13 @@
     }
 
     setInterval(setCountDown, 1000);
-    
+
+    var btn = document.getElementById('start');
+
+    var close = document.getElementsByClassName('close')[0];
+
+    btn.addEventListener('click', function () { modal.style.display = "block"; });
+
+    close.addEventListener('click', function () { modal.style.display = "none"; });
 </script>
 </html>
